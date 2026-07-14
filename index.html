@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>🏆 EnglishPro Max - #1 In The World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash">
+        <div class="splash-content">
+            <div class="splash-icon">👑</div>
+            <h1>EnglishPro Max</h1>
+            <p>The World's #1 English Learning Platform</p>
+            <div class="loading-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Container -->
+    <div id="app" style="display:none">
+        
+        <!-- Top Header -->
+        <header>
+            <div class="header-left">
+                <span class="logo">👑</span>
+                <div>
+                    <h2>EnglishPro Max</h2>
+                    <small>#1 in the World</small>
+                </div>
+            </div>
+            <div class="header-right">
+                <button onclick="toggleTheme()" class="icon-btn">🌓</button>
+                <span class="xp-badge" id="xpBadge">⭐ 0 XP</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="mainContent"></main>
+
+        <!-- Bottom Navigation -->
+        <nav>
+            <button onclick="navigate('home')" class="nav-btn active" data-nav="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button onclick="navigate('learn')" class="nav-btn" data-nav="learn">
+                <span class="nav-icon">📖</span>
+                <span class="nav-label">Learn</span>
+            </button>
+            <button onclick="navigate('speak')" class="nav-btn" data-nav="speak">
+                <span class="nav-icon">🎙️</span>
+                <span class="nav-label">Speak</span>
+            </button>
+            <button onclick="navigate('games')" class="nav-btn" data-nav="games">
+                <span class="nav-icon">🎮</span>
+                <span class="nav-label">Games</span>
+            </button>
+            <button onclick="navigate('profile')" class="nav-btn" data-nav="profile">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">Profile</span>
+            </button>
+        </nav>
+
+        <!-- Audio Player (Hidden) -->
+        <audio id="audioPlayer" preload="auto"></audio>
+        
+        <!-- Toast -->
+        <div id="toast" class="toast hidden"></div>
+        
+        <!-- Modal -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
